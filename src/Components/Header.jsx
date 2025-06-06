@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/CraveKart Logo with Burger & Cart (1).png";
+import { Link } from "react-router-dom";
 
 const HeaderComponent = () => {
   const [btnName, setBtnName] = useState("Login");
@@ -11,17 +12,21 @@ const HeaderComponent = () => {
       </div>
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
+          <li>
+            <Link to="/">HOME</Link>
+          </li>
+          <li>
+            <Link to="/about">About Us</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact Us</Link>
+          </li>
           <li>Cart</li>
           <li>
             <button
               className="nav-btn"
               onClick={() =>
-                btnName === "Login" ?
-                  setBtnName("Logout") :
-                  setBtnName("Login")
+                btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")
               }
             >
               {btnName}
