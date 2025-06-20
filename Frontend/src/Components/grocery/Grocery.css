@@ -1,0 +1,7 @@
+.grocery-container{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    margin: 30vh auto;
+    font-size: 2rem;
+}

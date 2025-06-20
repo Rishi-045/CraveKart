@@ -1,0 +1,132 @@
+/* header */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+}
+.logo-container img {
+  width: 250px;
+  height: 130px;
+  padding-left: 20px;
+}
+.nav-items ul li a {
+  text-decoration: none;
+  color: black;
+}
+.nav-items ul {
+  display: flex;
+  gap: 100px;
+  list-style-type: none;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+}
+.nav-items ul li {
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-items {
+  padding-right: 150px;
+}
+
+/* login logout button */
+.nav-btn {
+  margin-left: 15px;
+
+  padding: 6px 16px;
+  background-color: #ff4b2b; /* CraveKart orange */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #e03e1f;
+}
+
+/* ---------------------------- */
+/* Responsive Design Start Here */
+/* ---------------------------- */
+
+/* ============ Menu Toggle Hidden on Desktop/Tablet ============ */
+.menu-toggle {
+  display: none;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+  border: none;
+  color: #333;
+}
+
+/* ============ Responsive Styles ============ */
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+    margin-right: 20px;
+  }
+
+
+  .nav-items {
+    display: none; /* hide by default */
+    width: 100%;
+  }
+
+  .nav-items.open {
+    display: block; /* show when toggled */
+  }
+
+  .nav-items ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px 20px;
+  }
+
+  .nav-items ul li {
+    width: 100%;
+  }
+}
+
+/* Tablet View */
+@media (min-width: 481px) and (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    padding: 10px 30px;
+  }
+
+  .nav-items {
+    padding-right: 0;
+  }
+.logo-container img {
+  width: 150px;
+  height: 75px;
+  padding-left: 10px;
+}
+  .nav-items ul {
+    flex-direction: row;
+    gap: 25px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
