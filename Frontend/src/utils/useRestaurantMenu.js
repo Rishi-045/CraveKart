@@ -8,7 +8,7 @@ const backendURL = import.meta.env.VITE_BACKEND_URL;
 const useRestaurantMenu = (resId) => {
   let [resMenu, setResMenu] = useState(null);
    let [accordianList, setAccordianList] = useState([]);
-console.log(accordianList)
+
   useEffect(() => {
 
     const swiggyURL = `${import.meta.env.VITE_RES_MENU_API_URL}${resId}&catalog_qa=undefined&submitAction=ENTER`;

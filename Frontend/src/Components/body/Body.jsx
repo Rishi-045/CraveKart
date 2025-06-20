@@ -16,7 +16,7 @@ const Body = () => {
   useEffect(() => {
     setFilteredRestaurants(listOfRestaurants);
   }, [listOfRestaurants]);
-console.log(listOfRestaurants)
+
   //filter-btn logic
   let filterRestaurants = () => {
     let filteredRes = listOfRestaurants.filter(
