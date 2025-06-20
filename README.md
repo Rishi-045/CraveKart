@@ -1,17 +1,26 @@
 # CraveKart 🍔
 
-A modern food delivery web app built using **React + Vite**.
+## About the Project
 
-## 🚀 Technologies Used
-- ⚛️ React
-- ⚡ Vite
-- 🎨 Tailwind CSS (optional)
-- 📦 JavaScript / JSX
+This is a full-stack food ordering app using React, Express, Vite, and the Swiggy API.
 
-## 🛠️ Setup Instructions
+## Features
 
-```bash
-npm install
-npm run dev
+- View restaurants
+- Fetch live menu items
+- Uses proxy backend to avoid CORS
+- Deployed on Vercel and Render
 
-## ⚠️ This project is for educational purposes only. All data fetched from Swiggy is used only for learning and non-commercial use.
+## Disclaimer ⚠️
+
+This project is for **educational purposes only**.  
+It uses Swiggy's data without commercial intent or branding.
+
+## Tech Stack
+
+- React.js
+- Vite
+- Node.js
+- Express
+- Render (Backend)
+- Vercel (Frontend)
