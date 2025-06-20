@@ -32,7 +32,7 @@ const useRestaurantMenu = (resId) => {
     }
 
    
-  }, []);
+  },[]);
 
   return { resMenu, accordianList};
 };
