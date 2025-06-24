@@ -1,0 +1,24 @@
+.order-container {
+  margin: 5% 40%;
+  border: 1px solid rgb(148, 148, 148);
+}
+hr {
+  color: rgb(148, 148, 148);
+}
+
+.order-container .mid-container {
+  display: flex;
+  justify-content: space-between;
+}
+.empty-cart {
+  margin: 12.5% auto;
+}
+.clear-cart-btn {
+  background-color: #ff4b2b;
+  color: white;
+  padding: 5px;
+  border-radius: 7px;
+}
+.clear-cart-btn:hover {
+  background-color: #e03e1f;
+}

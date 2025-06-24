@@ -35,8 +35,6 @@ const RestaurantMenu = () => {
 
   let slaString = sla?.slaString;
 
-
-
   return (
     <div className="Restaurent-menu-container">
       <div className="upper-Container">
@@ -72,19 +70,20 @@ const RestaurantMenu = () => {
       <hr className="horizontal-line1" />
 
       <div className="flex flex-col gap-12  mt-4">
-        {accordianList.map((i,index) => (
-          <div key={i.card.card.title} className=" flex flex-col gap-10 cursor-pointer" onClick={()=>{
-            setOpenSection(openSection===index?null:index)
-          }}>
+        {accordianList.map((i, index) => (
+          <div key={i.card.card.title} className=" flex flex-col gap-10 ">
             <div
-              className="flex justify-between mb-24"
-              
+              className="flex justify-between mb-24 cursor-pointer"
+              onClick={() => {
+                setOpenSection(openSection === index ? null : index);
+              }}
             >
               <h1 className="font-semibold text-[1.23rem] ">
-                {i.card.card.title} ({i.card.card.itemCards.length})              </h1>
+                {i.card.card.title} ({i.card.card.itemCards.length}){" "}
+              </h1>
               <span>⮟</span>
             </div>
-            {openSection===index && (
+            {openSection === index && (
               <div className="flex flex-col gap-12 ">
                 {i.card.card.itemCards.map((res) => (
                   <React.Fragment key={res?.card?.info?.id}>

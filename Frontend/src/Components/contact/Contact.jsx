@@ -1,6 +1,6 @@
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./Contact.css"
+import "./Contact.css";
 
 const Contact = () => {
   const handleSubmit = (e) => {
