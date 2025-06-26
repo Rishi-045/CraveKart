@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 //import { RES_MENU_API_URL } from "./constant";
 // import mockData from "../utils/mockData";
 
-//const backendURL = import.meta.env.VITE_BACKEND_URL;
+const backendURL = import.meta.env.VITE_BACKEND_URL;
 //http://localhost:5000
 
 const useRestaurantMenu = (resId) => {
@@ -13,7 +13,7 @@ const useRestaurantMenu = (resId) => {
 
     const swiggyURL = `${import.meta.env.VITE_RES_MENU_API_URL}${resId}&catalog_qa=undefined&submitAction=ENTER`;
           
-        const proxyURL = `http://localhost:5000/swiggy/menu?url=${encodeURIComponent(
+        const proxyURL = `${backendURL}/swiggy/menu?url=${encodeURIComponent(
           swiggyURL
         )}`;
 
