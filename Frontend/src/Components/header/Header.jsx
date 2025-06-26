@@ -6,9 +6,7 @@ import { useSelector } from "react-redux";
 import { FaShoppingCart } from "react-icons/fa";
 
 const HeaderComponent = () => {
-  //subscribing to the store using selector
   const cartItems = useSelector((store) => store.cart.items);
-
   const [btnName, setBtnName] = useState("Login");
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -24,30 +22,28 @@ const HeaderComponent = () => {
           ☰
         </button>
       </div>
+
       <div className={`nav-items ${menuOpen ? "open" : ""}`}>
-        <ul className="">
+        <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
           </li>
           <li>
-            <Link to="/about">About Us</Link>
+            <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
           </li>
           <li>
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
           </li>
           <li>
-            <Link to="/grocery">Grocery</Link>
+            <Link to="/grocery" onClick={() => setMenuOpen(false)}>Grocery</Link>
           </li>
           <li>
-            <Link to="/cart">
-              {" "}
+            <Link to="/cart" onClick={() => setMenuOpen(false)}>
               <div className="relative">
-                <FaShoppingCart className="text-2xl text-gray-800" />{" "}
-                <span className="absolute -top-0.5 -right-10.5">Cart</span>
+                <FaShoppingCart className="text-2xl text-gray-800" />
+                <span className="ml-2">Cart</span>
                 {cartItems.length > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-[#ff4b2b] text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
-                    {cartItems.length}
-                  </span>
+                  <span className="cart-badge">{cartItems.length}</span>
                 )}
               </div>
             </Link>
@@ -56,7 +52,7 @@ const HeaderComponent = () => {
             <button
               className="nav-btn"
               onClick={() =>
-                btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")
+                setBtnName((prev) => (prev === "Login" ? "Logout" : "Login"))
               }
             >
               {btnName}

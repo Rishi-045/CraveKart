@@ -1,11 +1,11 @@
-import {  useEffect, useState } from "react";
-import  RestaurantCard,{ withPromotedLabel } from "../restaurantCard/RestaurantCard";
+import { useEffect, useState } from "react";
+import RestaurantCard, {
+  withPromotedLabel,
+} from "../restaurantCard/RestaurantCard";
 import Shimmer from "../shimmer/Shimmer";
 import { Link } from "react-router-dom";
 import "./Body.css";
 import useGetRestaurant from "../../utils/useGetRestaurant";
-
-
 
 const Body = () => {
   const listOfRestaurants = useGetRestaurant();
@@ -79,11 +79,11 @@ const Body = () => {
             key={restaurant.info.id}
             to={`/restaurant/${restaurant.info.id}`}
           >
-
-            {
-              (restaurant.info.avgRating > 4.6) ? (<RestaurantWithPromotedLabel resData = {restaurant}/>) : (<RestaurantCard resData={restaurant} />)
-            }
-            
+            {restaurant.info.avgRating > 4.6 ? (
+              <RestaurantWithPromotedLabel resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>

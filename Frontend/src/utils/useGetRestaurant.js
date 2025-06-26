@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-const backendURL = import.meta.env.VITE_BACKEND_URL;
+//const backendURL = import.meta.env.VITE_BACKEND_URL;
+//http://localhost:5000
+
 
 const useGetRestaurant = () => {
   let [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -10,7 +12,7 @@ const useGetRestaurant = () => {
     try {
       let fetchData = async () => {
         const swiggyURL = import.meta.env.VITE_RES_API_URL;
-        const proxyURL = `${backendURL}/swiggy?url=${encodeURIComponent(
+        const proxyURL = `http://localhost:5000/swiggy?url=${encodeURIComponent(
           swiggyURL
         )}`;
 

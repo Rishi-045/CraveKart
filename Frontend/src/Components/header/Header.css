@@ -1,48 +1,60 @@
 /* header */
-
 .header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   font-family: "Poppins", sans-serif;
+  padding: 10px 20px;
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
 }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .logo-container img {
-  width: 250px;
-  height: 130px;
-  padding-left: 20px;
+  width: 15rem;
+  height: 8rem;
 }
+
+/* nav styles */
+.nav-items {
+  padding-right: 100px;
+}
+
+.nav-items ul {
+  display: flex;
+  gap: 40px;
+  list-style-type: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
 .nav-items ul li a {
   text-decoration: none;
   color: black;
 }
-.nav-items ul {
-  display: flex;
-  gap: 100px;
-  list-style-type: none;
-  justify-content: space-evenly;
-  align-items: center;
-  text-decoration: none;
-}
+
 .nav-items ul li {
   font-weight: bold;
   cursor: pointer;
-  text-decoration: none;
 }
 
-.nav-items {
-  padding-right: 150px;
-}
-
-/* login logout button */
+/* login/logout button */
 .nav-btn {
-  margin-left: 15px;
-
-  padding: 6px 16px;
-  background-color: #ff4b2b; /* CraveKart orange */
+  margin-left: 10px;
+  padding: 6px 14px;
+  background-color: #ff4b2b;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -52,11 +64,28 @@
   background-color: #e03e1f;
 }
 
-/* ---------------------------- */
-/* Responsive Design Start Here */
-/* ---------------------------- */
+/* cart badge */
+.relative {
+  position: relative;
+}
 
-/* ============ Menu Toggle Hidden on Desktop/Tablet ============ */
+.cart-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ff4b2b;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hamburger Button */
 .menu-toggle {
   display: none;
   background: none;
@@ -66,67 +95,65 @@
   color: #333;
 }
 
-/* ============ Responsive Styles ============ */
 
 /* Mobile View */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px 20px;
+  }
+
+  .logo-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .logo-container img {
+    width: 140px;
   }
 
   .menu-toggle {
     display: block;
-    align-self: flex-end;
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
-
   .nav-items {
-    display: none; /* hide by default */
+    display: none;
     width: 100%;
+    background-color: #fff;
   }
 
   .nav-items.open {
-    display: block; /* show when toggled */
+    display: block;
   }
 
   .nav-items ul {
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
+    gap: 16px;
     padding: 10px 20px;
   }
 
   .nav-items ul li {
     width: 100%;
   }
+
+  .nav-btn {
+    width: fit-content;
+  }
 }
 
 /* Tablet View */
-@media (min-width: 481px) and (max-width: 768px) {
-  .header {
-    flex-direction: row;
-    padding: 10px 30px;
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo-container img {
+    width: 160px;
+  }
+
+  .nav-items ul {
+    gap: 30px;
   }
 
   .nav-items {
-    padding-right: 0;
-  }
-.logo-container img {
-  width: 150px;
-  height: 75px;
-  padding-left: 10px;
-}
-  .nav-items ul {
-    flex-direction: row;
-    gap: 25px;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .menu-toggle {
-    display: none;
+    padding-right: 30px;
   }
 }

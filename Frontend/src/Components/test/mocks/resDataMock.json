@@ -1,0 +1,84 @@
+{
+    "info": {
+        "id": "74045",
+        "name": "NIC Ice Creams",
+        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/22/f71eca97-c444-4ed8-9f94-fa909684f68c_74045.jpg",
+        "locality": "SHRIKRISNA CHAMBER",
+        "areaName": "DHENU MARKET",
+        "costForTwo": "₹120 for two",
+        "cuisines": [
+            "Ice Cream",
+            "Desserts"
+        ],
+        "avgRating": 4.7,
+        "veg": true,
+        "parentId": "6249",
+        "avgRatingString": "4.7",
+        "totalRatingsString": "8.7K+",
+        "sla": {
+            "deliveryTime": 27,
+            "lastMileTravel": 3,
+            "serviceability": "SERVICEABLE",
+            "slaString": "25-30 mins",
+            "lastMileTravelString": "3.0 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2025-06-25 23:30:00",
+            "opened": true
+        },
+        "badges": {
+            "imageBadges": [
+                {
+                    "imageId": "v1695133679/badges/Pure_Veg111.png",
+                    "description": "pureveg"
+                }
+            ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "pureveg",
+                                "imageId": "v1695133679/badges/Pure_Veg111.png"
+                            }
+                        }
+                    ]
+                },
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "ITEMS",
+            "subHeader": "AT ₹148"
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "--"
+            }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+        "context": "seo-data-1d1fbd38-dcff-4731-979c-efdfc4cdbb4a"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/city/indore/nic-ice-creams-shrikrisna-chamber-dhenu-market-rest74045",
+        "type": "WEBLINK"
+    }
+}
